@@ -1,0 +1,121 @@
+@echo off
+CLS
+COLOR 1F
+TITLE NUSL Updater
+mode con cols=85 lines=54
+set NUSLmin=/min
+set newversion=0.2
+set updatedlname=NUSL%newversion%.zip
+set UpdateDLlink="http://nusl.googlecode.com/files/%updatedlname%"
+if /i "%currentversion%" EQU "%newversion%" goto:aktuell
+if /i "%currentversion%" GEQ "%newversion%" goto:betashit
+if /i "%currentversion%" NEQ "%newversion%" goto:update
+
+:failed
+echo   Die Suche nach Updates ist fehlgeschlagen!
+echo   berprfe deine Internet Verbindung und deine Firewall
+@ping 127.0.0.1 -n 5 -w 1000> nul
+set currentversion=%currentversioncopy%
+goto:a
+
+:aktuell
+cls
+echo                                        NUSL                                v%currentversion%
+echo                               by the WiiDatabase Team
+echo.
+echo					   %DATE%
+echo.
+Support\sfk echo -spat \x20 \x20 \x20 \x20 \x20 \x20 \x20 [Green] Diese Version ist aktuell!
+echo.
+echo				Aktuelle Version: %newversion%
+echo				Deine    Version: %currentversion%
+@ping 127.0.0.1 -n 5 -w 1000> nul
+goto:menu
+
+:betashit
+cls
+echo                                        NUSL                                v%currentversion%
+echo                               by the WiiDatabase Team
+echo.
+echo					   %DATE%
+echo.
+Support\sfk echo -spat \x20 \x20 \x20 [Yellow] Deine Version ist aktueller als die letzte Version!
+Support\sfk echo -spat \x20 \x20 \x20 [Yellow] Du hast jetzt eine coole neue Betaversion!
+echo.
+echo				Aktuelle Version: %newversion%
+echo				Deine    Version: %currentversion%
+@ping 127.0.0.1 -n 5 -w 1000> nul
+goto:a
+
+:update
+cls
+set update=
+echo                                        NUSL                                v%currentversion%
+echo                               by the WiiDatabase Team
+echo.
+echo					   %DATE%
+echo.
+Support\sfk echo -spat \x20 \x20 \x20 \x20 \x20 \x20 \x20 [Red] Deine Version ist nicht aktuell!
+echo.
+echo.
+echo				Aktuelle Version: %newversion%
+echo				Deine    Version: %currentversion%
+echo.
+echo					M”chtest du updaten?
+echo.
+Support\sfk echo -spat \x20 \x20 \x20 \x20 \x20 \x20 \x20 [Green] J = Ja [Empfohlen]
+Support\sfk echo -spat \x20 \x20 \x20 \x20 \x20 \x20 \x20 [Red] N = Nein [Nicht empfohlen]
+echo.
+Support\sfk echo -spat \x20 \x20 \x20 \x20 \x20 \x20 \x20 [Green] C = Changelog ”ffnen (Internet)
+echo.
+echo.
+set /p update= Eingabe:		
+
+if /i "%update%" EQU "J" goto:updateNOW
+
+if /i "%update%" EQU "N" goto:noupdate
+
+if /i "%update%" EQU "C" start http://consolearea.square7.net/nusl/changelog.html
+if /i "%update%" EQU "C" goto:update
+
+:noupdate
+cls
+set update=
+echo                                        NUSL                                v%currentversion%
+echo                               by the WiiDatabase Team
+echo.
+echo					   %DATE%
+echo.
+Support\sfk echo -spat \x20 \x20 \x20 \x20 \x20 \x20 \x20 [Red] Deine Version ist veraltet!
+echo.
+echo				Update erneut, wenn dir danach ist!
+echo.
+echo.
+@ping 127.0.0.1 -n 5 -w 1000> nul
+goto:a
+
+:updateNOW
+cls
+set update=
+echo                                        NUSL                                v%currentversion%
+echo                               by the WiiDatabase Team
+echo.
+echo					   %DATE%
+echo.
+Support\sfk echo -spat \x20 \x20 \x20 \x20 [Green] Update von v%currentversion% zu v%newversion%!
+echo.
+echo 				  Downloade v%newversion%...
+start %NUSLmin%/wait support\wget -t 3 "%UpdateDLlink%"
+echo.
+echo.
+echo				  Bennene evtl. bestehende NUSL Version um...
+if exist NUSL.bat rename NUSL.bat NUSL-%currentversion%.bat
+move NUSL-%currentversion%.bat Support
+echo.
+echo				  Entpacke v%newversion%...
+echo.
+start %NUSLmin%/wait Support\7za x -aoa NUSL%newversion%.zip -r >NUL
+del NUSL%newversion%.zip
+echo.
+echo.				      Starte NUSL...
+call nusl.bat
