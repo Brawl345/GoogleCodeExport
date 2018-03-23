@@ -1,0 +1,25 @@
+------------ Hauptfunktionen ------------
+NET = Microsoft .NET Framework 2.0 (bei Fehlern installieren!) (Nicht fÅr 7/Vista!)
+------------ Apps -----------------------
+WAD = YAWMM (Wad Manager)
+------------ Kanaele --------------------
+O = Opera Internet Kanal
+BC = BC (Gamecube Support)
+F1 = Fotokanal 1.1
+M = MIOS
+W = WetterKanal
+Mii = Mii-Kanal
+Shop = Wii-Shop Kanal
+------------ Kritisches -----------------
+boot2 = Boot2
+EULA = End User License Agreement
+Brick = SystemmenÅ neu aufspielen
+Update = Wii auf 4.1 up/downgraden [EMPFOHLEN] powered by UHG-Downloader
+------------ IOS ------------------------
+IOS = IOS Database
+
+
+Exit = Exit
+
+Schreibe!
+
