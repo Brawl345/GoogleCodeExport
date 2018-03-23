@@ -20,9 +20,7 @@ v0.1 beta3
 - Warnmeldungen
 - Die Wartezeit der Warnmeldungen wird sich in der nächsten Version verkürzen
 - NUSDL wird endlich dass, was es werden soll!
-- update.exe zu NUSDL.exe umbennant!
-- Neues Menü
-- Support für das Zurechtmachen von Wiimms Mario Kart Fun
+- update.exe umbennant zu NUSDL.exe!
 
 v0.1 beta2 Hotfix
 - Wenn NUSDL in einem Verzeichnis mit Leerzeichen (inkl. Desktop, Eigene Dateien, etc.) ausgeführt wurde, erschien die Übersicht nicht. Nun kommt NUSDL mit einem grafischen Installer, der dazu zwingt, NUSDL in den Root zu kopieren.

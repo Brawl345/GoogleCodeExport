@@ -1,0 +1,16 @@
+Choose!
+NOTE: ALL CHANNELS ARE FOR PAL! A NTSC-U and NTSC-J will be added in (one of) the next version(s)!
+
+O = Opera Internet Channel
+BC = BC (Gamecube Support)
+P = Photo Channel 1.1
+M = MIOS
+W = Weather Channel
+Mii = Mii Channel
+Exit = Exit
+
+THIS IS JUST A BETA!
+v1.0 beta1 TheBatch WiiDatabase.de.tl
+
+Write!
+

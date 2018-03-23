@@ -1,0 +1,22 @@
+Waehle!
+NOTE: ALL CHANNELS ARE FOR PAL! A NTSC-U and NTSC-J will be added in (one of) the next version(s)!
+
+------------ Hauptfunktionen ------------
+NET = Microsoft .NET Framework 2.0 (bei Fehlern installieren!) (Nicht fuer 7/Vista!)
+------------ Apps -----------------------
+WAD = YAWMM (Wad Manager)
+------------ Kanaele --------------------
+O = Opera Internet Kanal
+BC = BC (Gamecube Support)
+P = Fotokanal 1.1
+M = MIOS
+W = WetterKanal
+Mii = Mii-Kanal
+------------ IOS ------------------------
+
+
+Kontakt: brawl98@googlemail.com
+Exit = Exit
+
+Schreibe!
+
